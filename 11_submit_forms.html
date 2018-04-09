@@ -4,12 +4,21 @@
         <meta charset="utf-8">
         <title>JavaScript - Submit Forms</title>
         <script type="text/javascript">
-            
+            function check_info(){
+                var username = document.getElementById('username').value;
+                var password = document.getElementById('password').value;
+                if(username=="" || password==""){
+                    alert('Please fill in all fields!');
+                    return false;
+                }else{
+                    return true;
+                }
+            }
         </script>
     </head>
     <body>
         <div>
-            <form action="another_page.php" method="POST">
+            <form action="submission.html" method="POST" onsubmit="return check_info();">
                 Username: <input type="text" name="username" id="username"/><br/><br/>
                 Password: <input type="password" name="password" id="password"/><br/><br/>
                 <input type="submit" value="Login">                
