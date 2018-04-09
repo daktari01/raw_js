@@ -1,0 +1,30 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript - Functions</title>
+        <script type="text/javascript">
+            function check_radio(){
+                var yes_checked = document.getElementById('yes').checked;
+                var no_checked = document.getElementById('no').checked;
+
+                if(yes_checked==false && no_checked==false){
+                    alert("Check either option!");
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <form action="submission.html" method="POST" onsubmit="return check_radio();">
+                <p>Do you want to auto-renew you memebership?</p>
+                <input type="radio" name="auto-renew" id="yes">Yes<br><br>
+                <input type="radio" name="auto-renew" id="no">No<br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
