@@ -15,11 +15,12 @@
                     image_tracker = 'boom';
                 }
             }
+            var timer = setInterval('change()', 2000);
         </script>
     </head>
     <body>
         <div>
-            <img src="images/pogbooom.jpg" alt="Pogba shot" id="pogboom" onclick="change();">
+            <img src="images/pogbooom.jpg" alt="Pogba shot" id="pogboom" onclick="clearInterval(timer);">
         </div>
     </body>
 </html>
