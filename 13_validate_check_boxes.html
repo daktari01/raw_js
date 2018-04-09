@@ -1,0 +1,38 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript - Validate Check Boxes</title>
+        <script type="text/javascript">
+            function validate_checks(){
+                var phones = document.getElementById('phones').checked;
+                var laptops = document.getElementById('laptops').checked;
+                var tvs = document.getElementById('tvs').checked;
+                var theatres = document.getElementById('theatres').checked;
+                var heating = document.getElementById('heating').checked;
+                var home = document.getElementById('home').checked;
+
+                if(phones==false && laptops==false && tvs==false &&theatres==false && heating==false && home==false){
+                    alert("Select at least one category")
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <form action="submission.html" method="POST" onsubmit="return validate_checks();">
+                <p>Please select categories you are interested in</p><br>
+                <input type="checkbox" name="electronics" id="phones">Phones and tablets<br><br>
+                <input type="checkbox" name="electronics" id="laptops">Laptops and accessories<br><br>
+                <input type="checkbox" name="electronics" id="tvs">TVs and screens<br><br>
+                <input type="checkbox" name="electronics" id="theatres">Home theatres and whoofers<br><br>
+                <input type="checkbox" name="electronics" id="heating">Heating and lighting<br><br>
+                <input type="checkbox" name="electronics" id="home">Home and living<br><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
